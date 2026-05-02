@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#0f3460">
+    <link rel="stylesheet" href="index.css">
+    <link rel="manifest" href="manifest.json">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <button id="install-btn" class="install-btn" style="display:none;">Install Calculator</button>
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    </div>
+    <div class="calculator">
+        <div class="display-container">
+            <div class="previous-operand" id="previous-operand"></div>
+            <div class="current-operand" id="current-operand">0</div>
+        </div>
+        <div class="buttons-grid">
+            <!-- Row 1: Memory functions -->
+            <button class="btn btn-memory" onclick="memoryClear()">MC</button>
+            <button class="btn btn-memory" onclick="memoryRecall()">MR</button>
+            <button class="btn btn-memory" onclick="memoryAdd()">M+</button>
+            <button class="btn btn-memory" onclick="memorySubtract()">M-</button>
+            <button class="btn btn-clear" onclick="clearAll()">AC</button>
+
+            <!-- Row 2: Scientific functions -->
+            <button class="btn btn-function" onclick="scientificFunction('sin')">sin</button>
+            <button class="btn btn-function" onclick="scientificFunction('cos')">cos</button>
+            <button class="btn btn-function" onclick="scientificFunction('tan')">tan</button>
+            <button class="btn btn-function" onclick="scientificFunction('log')">log</button>
+            <button class="btn btn-clear" onclick="deleteLast()">DEL</button>
+
+            <!-- Row 3: Scientific functions -->
+            <button class="btn btn-function" onclick="scientificFunction('asin')">sin⁻¹</button>
+            <button class="btn btn-function" onclick="scientificFunction('acos')">cos⁻¹</button>
+            <button class="btn btn-function" onclick="scientificFunction('atan')">tan⁻¹</button>
+            <button class="btn btn-function" onclick="scientificFunction('ln')">ln</button>
+            <button class="btn btn-operator" onclick="chooseOperator('÷')">÷</button>
+
+            <!-- Row 4: Scientific functions and operators -->
+            <button class="btn btn-function" onclick="scientificFunction('sqrt')">√</button>
+            <button class="btn btn-function" onclick="scientificFunction('cbrt')">∛</button>
+            <button class="btn btn-function" onclick="scientificFunction('square')">x²</button>
+            <button class="btn btn-function" onclick="scientificFunction('cube')">x³</button>
+            <button class="btn btn-operator" onclick="chooseOperator('x')">x</button>
+
+            <!-- Row 5: Numbers and operators -->
+            <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn btn-function" onclick="scientificFunction('factorial')">n!</button>
+            <button class="btn btn-operator" onclick="chooseOperator('-')">-</button>
+
+            <!-- Row 6: Numbers and operators -->
+            <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+            <button class="btn btn-function" onclick="scientificFunction('power')">x^y</button>
+            <button class="btn btn-operator" onclick="chooseOperator('+')">+</button>
+
+            <!-- Row 7: Numbers and operators -->
+            <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+            <button class="btn btn-function" onclick="scientificFunction('pi')">π</button>
+            <button class="btn btn-equals" onclick="compute()" style="grid-row: span 2;">=</button>
+
+            <!-- Row 8: Numbers and decimal -->
+            <button class="btn btn-number" onclick="appendNumber('0')" style="grid-column: span 2;">0</button>
+            <button class="btn btn-number" onclick="appendDecimal()">.</button>
+            <button class="btn btn-function" onclick="scientificFunction('e')">e</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

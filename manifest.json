@@ -1,0 +1,16 @@
+{
+  "name": "Scientific Calculator",
+  "short_name": "Calculator",
+  "description": "A scientific calculator app that can be installed as a PWA.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f3460",
+  "theme_color": "#0f3460",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
